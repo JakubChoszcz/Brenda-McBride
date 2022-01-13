@@ -1,0 +1,106 @@
+.navbarContainer {
+    background-color: #EAE6DE;
+}
+
+.navbarRow {
+    height: 124px;
+}
+
+.menuDiv {
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.menuBtn {
+    z-index: 10;
+    position: absolute;
+    height: 64px;
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.menuBtn_line {
+    width: 50px;
+    height: 8px;
+    background-color: #FF8C8C;
+    border-radius: 4px;
+    transition: all .5s ease-in-out;
+}
+
+.menuBtn_line::before,
+.menuBtn_line::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 8px;
+    background-color: #FF8C8C;
+    border-radius: 4px;
+    transition: all .5s ease-in-out;
+}
+
+.menuBtn_line::before {
+    transform: translateY(-16px);
+}
+
+.menuBtn_line::after {
+    transform: translateY(16px);
+}
+
+/* Animation */
+
+.menuBtn.open .menuBtn_line {
+    transform: translate(-50px);
+    background-color: transparent;
+}
+
+.menuBtn.open .menuBtn_line::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    background-color: #333;
+}
+
+.menuBtn.open .menuBtn_line::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background-color: #333;
+}
+
+.authorDiv {
+    font-family: 'Rozha One', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF8C8C;
+    cursor: default;
+}
+
+.socialDiv {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.socialUl {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.socialLi {
+    margin-left: 20px;
+}
+
+.socialIcon {
+    font-size: 22px;
+    color: #FF8C8C;
+    transition: color .2s ease-in-out;
+}
+
+.socialIcon:hover {
+    color: #333;
+}

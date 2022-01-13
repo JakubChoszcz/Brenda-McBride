@@ -1,0 +1,93 @@
+.container {
+    background-color: #FF8C8C;
+    font-family: 'Rozha One', serif;
+}
+
+.row {
+    height: 92px;
+}
+
+.linkDiv {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.link p {
+    margin: 0;
+    padding-left: 10px;
+    color: #EAE6DE;
+    font-size: 24px;
+    line-height: 1em;
+}
+
+.authorDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+}
+
+.authorP {
+    color: #EAE6DE;
+    margin: 0;
+    font-size: 18px;
+}
+
+.authorP a {
+    color: #333;
+    text-decoration: none;
+}
+
+.socialDiv {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    color: #EAE6DE;
+}
+
+.socialDiv p, .socialDiv a {
+    font-size: 14px;
+    margin: 0;
+}
+
+.socialDiv ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.socialLi {
+    color: #EAE6DE;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialLi a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.socialIcon {
+    font-size: 22px;
+    color: #EAE6DE;
+    transition: color .2s ease-in-out;
+}
+
+.socialIcon:hover {
+    color: #333;
+}

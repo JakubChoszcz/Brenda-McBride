@@ -1,0 +1,31 @@
+.menuDiv {
+    position: absolute;
+    z-index: 9;
+    background-color: hsla(0, 100%, 77%, .5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.menuUl {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.menuA {
+    color: #333;
+    font-family: 'Rozha One', serif;
+    font-size: 72px;
+    transition: color .2s ease-in-out;
+    text-decoration: none;
+}
+
+.menuA:hover {
+    color: #FF8C8C;
+}
