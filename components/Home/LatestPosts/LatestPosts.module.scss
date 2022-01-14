@@ -1,0 +1,46 @@
+$background-color-primary: #EAE6DE;
+$background-color-secondary: #FF8C8C;
+
+$font-color-primary: #333;
+$font-color-secondary: #777;
+
+.postsContainer {
+    background-color: $background-color-primary;
+}
+
+.postDiv {
+    width: 100%;
+    font-family: 'Rozha One', serif;
+    margin-bottom: 72px;
+
+    div {
+        height: 400px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h2 {
+        color: $background-color-secondary;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 8px 0;
+    }
+
+    h1 {
+        color: $font-color-primary;
+        font-size: 38px;
+    }
+
+    p {
+        color: $font-color-secondary;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bold;
+    }
+}

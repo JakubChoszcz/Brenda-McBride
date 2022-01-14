@@ -1,0 +1,42 @@
+$background-color-primary: #EAE6DE;
+$background-color-secondary: #FF8C8C;
+
+$font-color-primary: #333;
+$font-color-secondary: #777;
+
+.postsListContainer {
+    background-color: $background-color-primary;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        background-color: $background-color-secondary;
+        width: 216px;
+        height: 72px;
+        border-radius: 16px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border: none;
+        margin-bottom: 72px;
+
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bold;
+        color: $background-color-primary;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+
+        transition: background-color .5s ease-in-out;
+
+        &:hover {
+            background-color: #fd5e5e
+        }
+
+        &:active {
+            background-color: $font-color-secondary;
+        }
+    }
+}

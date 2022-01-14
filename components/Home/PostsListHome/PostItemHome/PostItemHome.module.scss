@@ -1,0 +1,42 @@
+$background-color-primary: #EAE6DE;
+$background-color-secondary: #FF8C8C;
+
+$font-color-primary: #333;
+$font-color-secondary: #777;
+
+.postDiv {
+    font-family: 'Rozha One', serif;
+    margin-bottom: 72px;
+
+    div {
+        width: 100%;
+        height: 320px;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h2 {
+        color: $background-color-secondary;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        margin: 8px 0 4px 0;
+    }
+
+    h1 {
+        color: $font-color-primary;
+        font-size: 28px;
+    }
+
+    p {
+        color: $font-color-secondary;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+    }
+}

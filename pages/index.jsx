@@ -1,7 +1,9 @@
 // http://localhost:3000/
 
 import Head from 'next/head'
-import Image from 'next/image'
+import AboutContainer from '../components/Home/AboutContainer/AboutContainer';
+import LatestPosts from '../components/Home/LatestPosts/LastestPosts';
+import PostsListHome from '../components/Home/PostsListHome/PostsListHome';
 
 const Home = () => {
   return (
@@ -9,7 +11,9 @@ const Home = () => {
     <Head>
       <title>Brenda McBride</title>
     </Head>
-      Home
+      <AboutContainer/>
+      <LatestPosts/>
+      <PostsListHome/>
     </>
   ) 
 }
