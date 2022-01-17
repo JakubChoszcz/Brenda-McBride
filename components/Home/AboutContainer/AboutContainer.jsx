@@ -7,7 +7,7 @@ const AboutContainer = () => {
             <div className={`container`}>
                 <div className={`row ${styles.aboutRow}`}>
                     <div className={`col-12`}>
-                        <Link href="/" passHref>
+                        <Link href="/about" passHref>
                             <a className={`${styles.aboutA}`}>
                                 <div className={`${styles.aboutDiv}`}>
                                     <div className={`${styles.aboutContent}`}>

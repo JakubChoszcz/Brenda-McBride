@@ -1,20 +1,25 @@
 .navbarContainer {
-    background-color: #EAE6DE;
+    position: fixed;
+    z-index: 10;
+    top: 0;
 }
 
 .navbarRow {
     height: 124px;
+    transition: background-color .2s ease-in;
+    background-color: #ffffff00;
 }
 
 .menuDiv {
     display: flex;
     align-items: center;
+    /* position: absolute; */
     z-index: 10;
 }
 
 .menuBtn {
-    z-index: 10;
     position: absolute;
+    z-index: 10;
     height: 64px;
     width: 64px;
     display: flex;

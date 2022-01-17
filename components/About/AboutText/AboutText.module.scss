@@ -1,0 +1,72 @@
+$background-color-primary: #EAE6DE;
+$background-color-secondary: #FF8C8C;
+
+$font-color-primary: #333;
+$font-color-secondary: #777;
+
+.containerDiv {
+    background-color: $background-color-primary;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+    padding: 128px 0;
+}
+
+.textDiv {
+    margin-bottom: 52px;
+
+    p {
+        color: $font-color-secondary;
+        font-size: 16px;
+    }
+}
+
+.quoteDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 72px;
+
+    h1 {
+        font-family: 'Rozha One', serif;
+        font-size: 64px;
+        color: $background-color-secondary;
+    }
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $background-color-secondary;
+        width: 216px;
+        height: 72px;
+        border-radius: 16px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border: none;
+
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bold;
+        color: $background-color-primary;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        text-decoration: none;
+
+        transition: background-color .5s ease-in-out;
+
+        &:hover {
+            background-color: #fd5e5e
+        }
+
+        &:active {
+            background-color: $font-color-secondary;
+        }
+    }
+}

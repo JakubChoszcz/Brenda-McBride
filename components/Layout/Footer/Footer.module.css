@@ -1,6 +1,7 @@
 .container {
     background-color: #FF8C8C;
     font-family: 'Rozha One', serif;
+    z-index: 2;
 }
 
 .row {

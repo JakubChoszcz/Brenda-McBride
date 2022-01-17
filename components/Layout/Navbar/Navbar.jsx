@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Menu from "./Menu/Menu";
 
 import styles from './Navbar.module.css';
@@ -6,13 +6,26 @@ import styles from './Navbar.module.css';
 const Navbar = () =>{
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 62) {
+                document.getElementsByClassName('navbar')[0].style.backgroundColor = '#EAE6DE';
+            } else {
+                document.getElementsByClassName('navbar')[0].style.backgroundColor = '#ffffff00';
+            }
+        })
+    }, [])
+
     return (
         <>
-            {isMenuOpen && <Menu/>}
             <div className={`container-fluid ${styles.navbarContainer}`}>
-                <div className={`row ${styles.navbarRow}`}>
+            {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen}/>}
+                <div className={`row navbar ${styles.navbarRow}`}>
                     <div className={`col-4 ${styles.menuDiv}`}>
-                        <div onClick={() => setIsMenuOpen(!isMenuOpen)} className={`${styles.menuBtn} ${isMenuOpen ? styles.open : ''}`}>
+                        <div 
+                            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+                            className={`${styles.menuBtn} ${isMenuOpen ? styles.open : ''}`}
+                        >
                             <div className={`${styles.menuBtn_line}`}></div>
                         </div>
                     </div>

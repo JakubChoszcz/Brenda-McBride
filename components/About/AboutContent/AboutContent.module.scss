@@ -1,0 +1,55 @@
+$background-color-primary: #EAE6DE;
+$background-color-secondary: #FF8C8C;
+
+$font-color-primary: #333;
+$font-color-secondary: #777;
+
+.containerDiv {
+    background-color: $background-color-primary;
+    padding: 150px 0;
+}
+
+.contentDiv {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+}
+
+.textDiv {
+    background-color: $background-color-secondary;
+    color: $background-color-primary;
+    font-size: 20px;
+    padding: 58px;
+    width: 100%;
+
+    position: relative;
+
+    p {
+        max-width: 450px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bold;
+    }
+}
+
+.imageDiv {
+    width: 500px;
+    height: 700px;
+
+    background-image: url('./contentImage.jpg');
+    background-size: contain;
+
+
+    position: absolute;
+    transform: translateX(100%) translateY(25%);
+}
+
+.ownerDiv {
+    h1 {
+        font-size: 72px;
+        font-family: 'Rozha One', serif;
+        color: $background-color-secondary;
+        margin-top: 42px;
+        margin-left: 128px;
+    }
+}

@@ -1,12 +1,13 @@
 $background-color-primary: #EAE6DE;
 $background-color-secondary: #FF8C8C;
 
-$font-color-primary: #333333;
-$font-color-secondary: #FFF;
+$font-color-primary: #333;
+$font-color-secondary: #777;
 
 .aboutContainer {
-    background-color: $background-color-primary;
     font-family: 'Rozha One', serif;
+    padding-top: 128px;
+    background-color: $background-color-primary;
 }
 
 .aboutA {

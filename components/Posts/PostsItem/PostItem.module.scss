@@ -1,0 +1,66 @@
+$background-color-primary: #EAE6DE;
+$background-color-secondary: #FF8C8C;
+
+$font-color-primary: #EAE6DE;
+$font-color-secondary: #AAA;
+
+.postItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #888;
+    margin-bottom: 62px;
+    background: #EAE6DE;
+    box-shadow: 0px 0px 8px $font-color-secondary;
+    border-radius: 16px;
+    padding: 32px;
+
+    .imageDiv {
+        margin-right: 50px;
+
+        .image {
+            width: 172px;
+            height: 172px;
+            border-radius: 16px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+.textDiv {
+    margin-right: 50px;
+    
+    h2 {
+        font-size: 42px;
+        color: #333;
+    }
+
+    p {
+        font-size: 18px;
+        color: #777;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bold;
+    }
+}
+
+.linkDiv {
+    a {
+        text-decoration: none;
+        font-size: 32px;
+        color: $font-color-primary;
+    }
+
+    div {
+        width: 92px;
+        height: 92px;
+        border-radius: 16px;
+        background-color: $background-color-secondary;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

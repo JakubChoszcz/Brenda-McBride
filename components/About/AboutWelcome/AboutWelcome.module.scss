@@ -1,0 +1,72 @@
+$background-color-primary: #EAE6DE;
+
+$font-color-primary: #FF8C8C;
+
+.welcomeContainer {
+    font-family: 'Rozha One', serif;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(0deg, #EAE6DE 0%, rgba(234, 230, 222, 0) 50%), url('./welcomeImage.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contentDiv {
+    transform: translateX(50%) translateY(-25%);
+
+    h1 {
+        font-size: 128px;
+        color: $font-color-primary;
+    }
+}
+
+.scrollDownDiv {
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    bottom: 52px;
+
+    .mouse {
+        border: 5px solid $font-color-primary;
+        width: 30px;
+        height: 52px;
+        border-radius: 18px;
+        display: flex;
+        padding: 8px 0;
+        justify-content: center;
+        margin-bottom: 18px;
+
+        .pointer {
+            background-color: $font-color-primary;
+            width: 10px;
+            height: 10px;
+            border-radius: 6px;
+
+            animation: pointerAnimation 1.2s linear .2s infinite forwards;
+        }
+
+        @keyframes pointerAnimation {
+            100% {
+                transform: translateY(0);
+            }
+            25% {
+                transform: translateY(10px);
+            }
+        }
+    }
+    
+    h2 {
+        font-size: 22px;
+        font-weight: bold;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        color: $font-color-primary;
+    }
+}
