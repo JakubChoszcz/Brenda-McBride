@@ -10,8 +10,11 @@ $font-color-primary: #FF8C8C;
     justify-content: center;
     align-items: center;
 
+    position: relative;
+    margin-bottom: 0;
+
     background: linear-gradient(0deg, #EAE6DE 0%, rgba(234, 230, 222, 0) 50%), url('./welcomeImage.jpg');
-    background-position: left;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }

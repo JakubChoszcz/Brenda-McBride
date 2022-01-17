@@ -15,7 +15,7 @@ const AboutWelcome = () => {
             scrub: 1
         }})
             .to('.contentDiv', {y: '-128px', opacity: 0}, 0)
-            .to('.scrollDownDiv', {y: '-64px', opacity: 0}, .5)
+            .to('.scrollDownDiv', {y: '-64px', opacity: 0}, 0)
     }, [])
 
     return (

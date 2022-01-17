@@ -17,7 +17,7 @@ const PostItem = ({ image, title, description, id }) => {
             </div>
             <div className={`${styles.linkDiv}`}>
                 <Link href={`/posts/${id}`}>
-                    <a><div>W</div></a>
+                    <a><div><i className="fas fa-chevron-right"></i></div></a>
                 </Link>
             </div>
         </div>

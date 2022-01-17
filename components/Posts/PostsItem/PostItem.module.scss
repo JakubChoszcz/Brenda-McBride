@@ -35,32 +35,62 @@ $font-color-secondary: #AAA;
     
     h2 {
         font-size: 42px;
-        color: #333;
+        color: #555;
     }
 
     p {
         font-size: 18px;
-        color: #777;
+        color: $font-color-secondary;
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-weight: bold;
     }
 }
 
 .linkDiv {
-    a {
-        text-decoration: none;
-        font-size: 32px;
-        color: $font-color-primary;
-    }
+    // a {
+    //     text-decoration: none;
+    //     font-size: 32px;
+    //     color: $font-color-primary;
+    // }
 
-    div {
-        width: 92px;
-        height: 92px;
-        border-radius: 16px;
-        background-color: $background-color-secondary;
+    // div {
+    //     width: 92px;
+    //     height: 92px;
+    //     border-radius: 16px;
+    //     background-color: $background-color-secondary;
         
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+
+    a {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        background-color: $background-color-secondary;
+        width: 92px;
+        height: 92px;
+        border-radius: 16px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border: none;
+
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bold;
+        color: $background-color-primary;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+
+        transition: background-color .5s ease-in-out;
+
+        &:hover {
+            background-color: #fd5e5e
+        }
+
+        &:active {
+            background-color: $font-color-secondary;
+        }
     }
 }
