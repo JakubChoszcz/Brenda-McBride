@@ -1,20 +1,41 @@
+import { ObjectId } from "mongodb";
 import Head from "next/head"
 import SelectedPost from "../../../components/Post/SelectedPost";
 
+import { connectToDatabase } from "../../../lib/mongodb";
+
 export const getStaticPaths = async () => {
+    const { client, db } = await connectToDatabase();
+
+    const getPosts = await db
+        .collection('posts')
+        .find({})
+        .toArray();
+
+    const posts = JSON.parse(JSON.stringify(getPosts))
+
+    const paths = [];
+
+    posts.map((post) => paths.push({ params: { postId: ObjectId(post._id).toString() } }));
+
+    client.close();
+
     return {
-        paths: [
-            { params: { postId: '1' } },
-            { params: { postId: '2' } },
-            { params: { postId: '3' } },
-            { params: { postId: '4' } },
-            { params: { postId: '5' } }
-        ],
+        paths: paths,
         fallback: false
     }
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ params }) => {
+    const { postId } = params;
+    const { client, db } = await connectToDatabase();
+
+    const getPost = await db
+        .collection('posts')
+        .findOne({ _id: ObjectId(postId) });
+    
+    const post = JSON.parse(JSON.stringify(getPost));
+
     const data = {
         id: 1,
         title: 'Lorem ipsum dolor sit amet',
@@ -27,18 +48,18 @@ export const getStaticProps = async () => {
     
     return {
         props: {
-            data
+            post
         }
     }
 }
 
-const Post = ({ data }) => {
+const Post = ({ post }) => {
     return (
         <>
             <Head>
-                <title>{`Brenda McBride - ${data.title}`}</title>
+                <title>{`Brenda McBride - ${post.title}`}</title>
             </Head>
-            <SelectedPost data={data} />
+            <SelectedPost data={post} />
         </>
     )
 }
