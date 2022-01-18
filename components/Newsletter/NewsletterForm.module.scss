@@ -5,7 +5,7 @@ $font-color-primary: #EAE6DE;
 $font-color-secondary: #AAA;
 
 .newsletterDiv {
-    background-color: $background-color-secondary;
+    background-color: $background-color-primary;
     color: $font-color-primary;
     font-family: 'Rozha One', serif;
     min-height: 100vh;
@@ -13,6 +13,9 @@ $font-color-secondary: #AAA;
     justify-content: center;
     align-items: center;
     padding-top: 128px;
+
+    color: $background-color-secondary;
+    overflow-y: hidden;
 }
 
 .titleDiv {
@@ -23,6 +26,7 @@ $font-color-secondary: #AAA;
 
     h1 {
         font-size: 92px;
+        color: $background-color-secondary;
     }
 }
 
@@ -33,7 +37,7 @@ $font-color-secondary: #AAA;
     margin-bottom: 46px;
 
     input {
-        background: #EAE6DE;
+        background: $background-color-secondary;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 16px;
         height: 72px;
@@ -42,7 +46,7 @@ $font-color-secondary: #AAA;
         color: #444;
 
         &::placeholder {
-            color: $font-color-secondary;
+            color: $font-color-primary;
         }
     }
 }
@@ -51,20 +55,21 @@ $font-color-secondary: #AAA;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 72px;
 
     a {
-        font-size: 52px;
-        color: $background-color-primary;
+        font-size: 32px;
+        color: #666;
         text-decoration: none;
+        margin-right: 32px;
     }
 
     input {
         background-color: #EAE6DE;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        width: 72px;
-        height: 72px;
+        width: 32px;
+        height: 32px;
     }
 }
 
@@ -75,7 +80,7 @@ $font-color-secondary: #AAA;
     font-size: 52px;
     
     button {
-        background-color: $background-color-primary;
+        background-color: $background-color-secondary;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 16px;
         height: 72px;
@@ -85,7 +90,7 @@ $font-color-secondary: #AAA;
         justify-content: center;
         align-items: center;
         width: 100%;
-        color: $background-color-secondary;
+        color: $font-color-primary;
         transition: background-color .2s ease-in;
 
         &:disabled {

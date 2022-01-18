@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import styles from './NewsletterForm.module.scss';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
-const NewsletterForm = () => {
+const NewsletterForm = ({ handleAddNewsletter }) => {
+    const route = useRouter()
+
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [userEmail, setUserEmail] = useState('');
@@ -17,7 +20,9 @@ const NewsletterForm = () => {
             userEmail
         }
 
-        console.log(userData);
+        handleAddNewsletter(userData);
+
+        route.push('/');
     }
 
     return (

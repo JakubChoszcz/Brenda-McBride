@@ -1,7 +1,12 @@
 import Link from 'next/link';
+import { useEffect } from 'react';
 import styles from './SelectedPost.module.scss';
 
 const SelectedPost = ({ data }) => {
+    useEffect(() => {
+        document.getElementsByClassName('contentDiv')[0].innerHTML = data.content;
+    }, [])
+
     return (
         <div className={`${styles.postContainer}`}>
             <div className={`container`}>
@@ -24,7 +29,8 @@ const SelectedPost = ({ data }) => {
                     <div className={`col-2`}></div>
                     <div className={`col-8`}>
                         <div className={`${styles.contentDiv}`}>
-                            <p>{data.content}</p>
+                            <div className='contentDiv'></div>
+                            {/* // {data.content} */}
                         </div>
                     </div>
                 </div>

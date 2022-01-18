@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import PostItem from './PostsItem/PostItem';
 import styles from './PostsList.module.scss';
 
-const PostsList = ({ postsData }) => {
+const PostsList = ({ postsData, getMorePosts, hasMore }) => {
     return (
         <div className={`${styles.postsContainer}`}>
             <div className={`container`}>
@@ -16,22 +16,23 @@ const PostsList = ({ postsData }) => {
                 <div className={`row`}>
                     <div className={`col-12`}>
                         <div className={`${styles.postsDiv}`}>
-                            {postsData.map(post => 
-                                <PostItem
-                                    key={post.id}
-                                    id={post.id}
-                                    title={post.title}
-                                    description={post.description}
-                                    image={post.image}
-                                />
-                            )}
-                        </div>
-                    </div>
-                </div>
-                <div className={`row`}>
-                    <div className={`col-12`}>
-                        <div className={`${styles.showMoreDiv}`}>
-                            <button>Show More</button>
+                            <InfiniteScroll
+                                dataLength={postsData.length}
+                                next={getMorePosts}
+                                hasMore={postsData.length === 12 ? false : true}
+                                loader={<h3>Loading posts...</h3>}
+                                endMessage={<h3>Theres no more posts.</h3>}
+                            >
+                                {postsData.map(post => 
+                                    <PostItem
+                                        key={post._id}
+                                        id={post._id}
+                                        title={post.title}
+                                        description={post.description}
+                                        image={post.image}
+                                    />
+                                )}
+                            </InfiniteScroll>
                         </div>
                     </div>
                 </div>

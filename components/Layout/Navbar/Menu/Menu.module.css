@@ -2,7 +2,7 @@
     position: fixed;
     left: 0;
     z-index: 9;
-    background-color: hsla(0, 100%, 77%, .5);
+    background-color: hsla(0, 100%, 77%, .9);
     width: 100%;
     height: 100%;
     display: flex;
@@ -28,5 +28,5 @@
 }
 
 .menuA:hover {
-    color: #FF8C8C;
+    color: #EAE6DE;
 }
