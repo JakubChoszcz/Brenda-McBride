@@ -14,7 +14,7 @@ $font-color-secondary: #777;
     margin-bottom: 72px;
 
     div {
-        height: 400px;
+        height: 456px;
         width: 100%;
         background-position: center;
         background-size: cover;
@@ -30,7 +30,7 @@ $font-color-secondary: #777;
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-weight: bold;
         font-size: 18px;
-        margin: 8px 0;
+        margin-top: 16px;
     }
 
     h1 {
@@ -42,5 +42,19 @@ $font-color-secondary: #777;
         color: $font-color-secondary;
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-weight: bold;
+    }
+
+    @media (max-width: 767px) {
+        div {
+            height: 400px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 14px;
+        }
     }
 }

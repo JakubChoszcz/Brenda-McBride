@@ -14,17 +14,42 @@ $font-color-primary: #FF8C8C;
     margin-bottom: 0;
 
     background: linear-gradient(0deg, #EAE6DE 0%, rgba(234, 230, 222, 0) 50%), url('./welcomeImage.jpg');
-    background-position: top;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .contentDiv {
-    transform: translateX(50%) translateY(-25%);
-
     h1 {
         font-size: 128px;
         color: $font-color-primary;
+
+        transform: translateX(200px) translateY(-100px);
+    }
+
+    @media (max-width: 1199px) {
+        h1 {
+            font-size: 92px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        h1 {
+            font-size: 72px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        h1 {
+            font-size: 72px;
+            transform: translateX(140px) translateY(-100px);
+        }
+    }
+
+    @media (max-width: 576px) {
+        h1 {
+            transform: translateX(0px) translateY(0px);
+        }
     }
 }
 

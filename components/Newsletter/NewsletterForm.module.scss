@@ -16,6 +16,10 @@ $font-color-secondary: #AAA;
 
     color: $background-color-secondary;
     overflow-y: hidden;
+
+    @media (max-width: 765px) {
+        padding-top: 72px;
+    }
 }
 
 .titleDiv {
@@ -25,15 +29,28 @@ $font-color-secondary: #AAA;
     margin-bottom: 46px;
 
     h1 {
-        font-size: 92px;
+        font-size: 64px;
         color: $background-color-secondary;
+        text-align: center;
+    }
+
+    @media (max-width: 1199px) {
+        h1 {
+            font-size: 54px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        h1 {
+            font-size: 38px;
+        }
     }
 }
 
 .inputDiv, .emailDiv {
     display: flex;
     flex-direction: column;
-    font-size: 52px;
+    font-size: 32px;
     margin-bottom: 46px;
 
     input {
@@ -49,6 +66,10 @@ $font-color-secondary: #AAA;
             color: $font-color-primary;
         }
     }
+
+    @media (max-width: 575px) {
+        font-size: 26px;
+    }
 }
 
 .checkboxDiv {
@@ -58,11 +79,12 @@ $font-color-secondary: #AAA;
     justify-content: flex-end;
     height: 72px;
 
-    a {
-        font-size: 32px;
+    p {
+        font-size: 24px;
         color: #666;
         text-decoration: none;
         margin-right: 32px;
+        margin-bottom: 0;
     }
 
     input {
@@ -71,13 +93,18 @@ $font-color-secondary: #AAA;
         width: 32px;
         height: 32px;
     }
+
+    @media (max-width: 765px) {
+        margin-bottom: 32px;
+        justify-content: center;
+    }
 }
 
 .buttonDiv {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 52px;
+    font-size: 32px;
     
     button {
         background-color: $background-color-secondary;

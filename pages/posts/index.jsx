@@ -2,7 +2,7 @@
 
 import Head from "next/head";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import PostsList from "../../components/Posts/PostsList";
 
@@ -14,7 +14,7 @@ export const getServerSideProps = async () => {
     const getPosts = await db
         .collection("posts")
         .find({})
-        .limit(3)
+        .limit(6)
         .toArray();
 
     const data = JSON.parse(JSON.stringify(getPosts));
@@ -29,8 +29,8 @@ export const getServerSideProps = async () => {
 const Posts = ({ data }) => {
     const [posts, setPosts] = useState(data)
 
-    const [skip, setSkip] = useState(3);
-    const [limit, setLimit] = useState(3);
+    const [skip, setSkip] = useState(6);
+    const [limit, setLimit] = useState(6);
 
     const getMorePosts = async () => {
         const res = await fetch(`/api/posts/getMorePosts?skip=${skip}&limit=${limit}`, {
@@ -49,7 +49,7 @@ const Posts = ({ data }) => {
             <Head>
                 <title>Brenda McBride - Posts</title>
             </Head>
-            <PostsList postsData={posts} getMorePosts={getMorePosts} />
+            <PostsList postsData={posts} getMorePosts={getMorePosts}/>
         </>
     )
 }

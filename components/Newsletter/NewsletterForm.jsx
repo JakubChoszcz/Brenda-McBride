@@ -37,7 +37,7 @@ const NewsletterForm = ({ handleAddNewsletter }) => {
                         </div>
                     </div>
                     <div className={`row`}>
-                        <div className={`col-6`}>
+                        <div className={`col-md-6 col-12`}>
                             <div className={`${styles.inputDiv}`}>
                                 <label htmlFor="firstName">First name</label>
                                 <input 
@@ -47,10 +47,11 @@ const NewsletterForm = ({ handleAddNewsletter }) => {
                                     className={`${styles.input}`}
                                     id="firstName"
                                     placeholder="Brenda"
+                                    required
                                 />
                             </div>
                         </div>
-                        <div className={`col-6`}>
+                        <div className={`col-md-6 col-12`}>
                             <div className={`${styles.inputDiv}`}>
                                 <label htmlFor="lastName">Last name</label>
                                 <input 
@@ -60,6 +61,7 @@ const NewsletterForm = ({ handleAddNewsletter }) => {
                                     className={`${styles.input}`}
                                     id="lastName"
                                     placeholder="McBride"
+                                    required
                                 />
                             </div>
                         </div>
@@ -75,16 +77,15 @@ const NewsletterForm = ({ handleAddNewsletter }) => {
                                     className={`${styles.input}`}
                                     id="userEmail"
                                     placeholder="brenda.mcbride@domain.com"
+                                    required
                                 />
                             </div>
                         </div>
                     </div>
                     <div className={`row`}>
-                        <div className={`col-6`}>
+                        <div className={`col-md-6 col-12`}>
                             <div className={`${styles.checkboxDiv}`}>
-                                <Link href="/private-policy">
-                                    <a>Accept private policy</a>
-                                </Link>
+                                    <p>Accept private policy</p>
                                 <input
                                     type="checkbox"
                                     value={privatePolicy}
@@ -93,7 +94,7 @@ const NewsletterForm = ({ handleAddNewsletter }) => {
                                 />
                             </div>
                         </div>
-                        <div className={`col-6`}>
+                        <div className={`col-md-6 col-12`}>
                             <div className={`${styles.buttonDiv}`}>
                                 <button
                                     type="submit"

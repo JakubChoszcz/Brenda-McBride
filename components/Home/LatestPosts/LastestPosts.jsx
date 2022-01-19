@@ -6,7 +6,7 @@ const LatestPosts = ({ data }) => {
         <div className={`${styles.postsContainer}`}> 
             <div className={`container`}>
                 <div className={`row`}>
-                    <div className={`col-6`}>
+                    <div className={`col-lg-6 col-12`}>
                         <div className={`${styles.postDiv}`}>
                             <Link href={`/posts/${data[0]._id}`}>
                                 <a>
@@ -22,7 +22,7 @@ const LatestPosts = ({ data }) => {
                             </Link>
                         </div>
                     </div>
-                    <div className={`col-6`}>
+                    <div className={`col-lg-6 col-12`}>
                         <div className={`${styles.postDiv}`}>
                             <Link href={`/posts/${data[1]._id}`}>
                                 <a>

@@ -5,7 +5,7 @@
 }
 
 .row {
-    height: 92px;
+    height: 64px;
 }
 
 .linkDiv {
@@ -18,6 +18,16 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+}
+
+.linkImage {
+    width: 42px;
+    height: 42px;
+    
+    background-image: url('../../../public/logo-primary.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .link p {
@@ -40,6 +50,7 @@
     color: #EAE6DE;
     margin: 0;
     font-size: 14px;
+    text-align: center;
 }
 
 .authorP a {
@@ -91,4 +102,10 @@
 
 .socialIcon:hover {
     color: #333;
+}
+
+@media (max-width: 575px) {
+    .authorDiv {
+        display: none;
+    }
 }

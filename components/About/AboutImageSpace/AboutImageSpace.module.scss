@@ -35,6 +35,10 @@ $font-color-secondary: #777;
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    @media (max-width: 575px) {
+        height: 30vh;
+    }
 }
 
 .textDiv {
@@ -49,5 +53,19 @@ $font-color-secondary: #777;
         color: $background-color-secondary;
         font-family: 'Rozha One', serif;
         margin-bottom: 32px;
+    }
+
+    @media (max-width: 767px) {
+        h1 {
+            font-size: 52px;
+            margin-bottom: 72px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        h1 {
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
     }
 }

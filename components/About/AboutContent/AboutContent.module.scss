@@ -7,6 +7,10 @@ $font-color-secondary: #777;
 .containerDiv {
     background-color: $background-color-primary;
     padding: 150px 0;
+
+    @media (max-width: 767px) {
+        padding: 72px 0;
+    }
 }
 
 .contentDiv {
@@ -30,6 +34,40 @@ $font-color-secondary: #777;
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-weight: bold;
     }
+
+    @media (max-width: 1399px) {
+        p {
+            width: 360px;
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        p {
+            max-width: 300px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        p {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        p {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding: 22px;
+
+        p {
+            width: 100%;
+        }
+    }
 }
 
 .imageDiv {
@@ -41,7 +79,22 @@ $font-color-secondary: #777;
 
 
     position: absolute;
-    transform: translateX(100%) translateY(25%);
+    transform: translateX(500px) translateY(150px);
+
+    @media (max-width: 1399px) {
+        width: 350px;
+        height: 490px;
+
+        transform: translateX(400px) translateY(150px);
+    }
+
+    @media (max-width: 1199px) {
+        transform: translateX(310px) translateY(150px);    
+    }
+
+    @media (max-width: 767px) {
+        display: none;   
+    }
 }
 
 .ownerDiv {
@@ -51,5 +104,19 @@ $font-color-secondary: #777;
         color: $background-color-secondary;
         margin-top: 42px;
         margin-left: 128px;
+    }
+
+    @media (max-width: 1199px) {
+        h1 {
+            font-size: 52px;
+            margin-left: 92px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        h1 {
+            font-size: 52px;
+            margin-left: 52px;
+        }
     }
 }

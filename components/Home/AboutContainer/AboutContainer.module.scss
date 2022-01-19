@@ -8,6 +8,10 @@ $font-color-secondary: #777;
     font-family: 'Rozha One', serif;
     padding-top: 128px;
     background-color: $background-color-primary;
+
+    @media (max-width: 567px) {
+        padding-top: 92px;
+    }
 }
 
 .aboutA {
@@ -36,6 +40,10 @@ $font-color-secondary: #777;
 
     .aboutContent {
         max-width: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         h1 {
             color: $font-color-primary;
@@ -47,13 +55,49 @@ $font-color-secondary: #777;
             text-align: center;
             color: $background-color-primary;
         }
+
+        @media (max-width: 991px) {
+            h1 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 24px;
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 18px;
+                max-width: 280px;
+            }
+            
+            p {
+                font-size: 14px;
+            }
+        }
     }
 
     &:hover .aboutDiv {
-        background-color: hsla(0, 100%, 77%, 0.5);
+        background-color: hsla(0, 100%, 77%, 0.25);
     }
 
     &:hover h1 {
         color: darken($color: $background-color-secondary, $amount: 10);
+    }
+
+    @media (max-width: 991px) {
+        height: 520px;
+    }
+
+    @media (max-width: 767px) {
+        height: 400px;
+    }
+
+    @media (max-width: 576px) {
+        height: 320px;
     }
 }

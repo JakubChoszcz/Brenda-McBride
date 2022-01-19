@@ -4,7 +4,7 @@ import styles from './PostItemHome.module.scss';
 
 const PostItemHome = ({ id, title, tag, image, description }) => {
     return (
-        <div className={`col-4`}>
+        <div className={`col-lg-4 col-12`}>
             <div className={`${styles.postDiv}`}>
                 <Link href={`/posts/${id}`}>
                     <a>

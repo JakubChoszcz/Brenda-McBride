@@ -34,9 +34,9 @@ const Navbar = () =>{
                     </div>
                     <div className={`col-4 ${styles.socialDiv}`}>
                         <ul className={`${styles.socialUl}`}>
-                            <li className={`${styles.socialLi}`}><a href="#" target="_blank"><i className={`fab fa-twitter-square ${styles.socialIcon}`}></i></a></li>
-                            <li className={`${styles.socialLi}`}><a href="#" target="_blank"><i className={`fab fa-facebook-square ${styles.socialIcon}`}></i></a></li>
-                            <li className={`${styles.socialLi}`}><a href="#" target="_blank"><i className={`fab fa-instagram ${styles.socialIcon}`}></i></a></li>
+                            <li className={`${styles.socialLi}`}><a href="https://twitter.com/" target="_blank" rel="noreferrer"><i className={`fab fa-twitter-square ${styles.socialIcon}`}></i></a></li>
+                            <li className={`${styles.socialLi}`}><a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i className={`fab fa-facebook-square ${styles.socialIcon}`}></i></a></li>
+                            <li className={`${styles.socialLi}`}><a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><i className={`fab fa-instagram ${styles.socialIcon}`}></i></a></li>
                         </ul>
                     </div>
                 </div>

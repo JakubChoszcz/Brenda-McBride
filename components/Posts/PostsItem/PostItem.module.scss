@@ -9,10 +9,11 @@ $font-color-secondary: #AAA;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
     background-color: #888;
     margin-bottom: 62px;
     background: #EAE6DE;
-    border: 2px solid $font-color-secondary;
+    border: 2px solid lighten($color: $font-color-secondary, $amount: 15);
     border-radius: 16px;
     padding: 32px 52px;
 
@@ -26,6 +27,28 @@ $font-color-secondary: #AAA;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+        }
+    }
+
+    @media (max-width: 991px) {
+        flex-direction: column;
+
+        .imageDiv {
+            margin-right: 0;
+
+            .image {
+                width: 320px;
+                height: 320px;
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding: 24px 16px;
+
+        .imageDiv {
+            display: none;
         }
     }
 }
@@ -44,26 +67,32 @@ $font-color-secondary: #AAA;
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-weight: bold;
     }
+
+    @media (max-width: 1199px) {
+        h2 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        margin-right: 0;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 32px;
+        }
+
+        p {
+            margin-bottom: 32px;
+        }
+    }
 }
 
 .linkDiv {
-    // a {
-    //     text-decoration: none;
-    //     font-size: 32px;
-    //     color: $font-color-primary;
-    // }
-
-    // div {
-    //     width: 92px;
-    //     height: 92px;
-    //     border-radius: 16px;
-    //     background-color: $background-color-secondary;
-        
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    // }
-
     a {
         display: flex;
         justify-content: center;
@@ -91,6 +120,12 @@ $font-color-secondary: #AAA;
 
         &:active {
             background-color: $font-color-secondary;
+        }
+    }
+
+    @media (max-width: 991px) {
+        a {
+            width: 200px;
         }
     }
 }

@@ -26,11 +26,10 @@ const SelectedPost = ({ data }) => {
                     </div>
                 </div>
                 <div className={`row`}>
-                    <div className={`col-2`}></div>
-                    <div className={`col-8`}>
+                    <div className={`col-0 col-lg-2`}></div>
+                    <div className={`col-12 col-lg-8`}>
                         <div className={`${styles.contentDiv}`}>
                             <div className='contentDiv'></div>
-                            {/* // {data.content} */}
                         </div>
                     </div>
                 </div>

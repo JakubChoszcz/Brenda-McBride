@@ -110,3 +110,23 @@
 .socialIcon:hover {
     color: #333;
 }
+
+@media (max-width: 862px) {
+    .authorDiv h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbarRow {
+        height: 92px;
+    }
+
+    .authorDiv h1 {
+        font-size: 22px;
+    }
+
+    .socialLi {
+        margin-left: 10px;
+    }
+}

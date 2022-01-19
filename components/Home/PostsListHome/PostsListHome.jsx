@@ -18,9 +18,6 @@ const PostsListHome = ({ data }) => {
                             description={item.description}
                         />
                     )}
-                    {/* <PostItemHome data={data[0]}/>
-                    <PostItemHome data={data[0]}/>
-                    <PostItemHome data={data[0]}/> */}
                 </div>
                 <div className={`row`}>
                     <div className={`col-12 ${styles.buttonDiv}`}>

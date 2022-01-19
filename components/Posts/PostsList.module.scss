@@ -8,6 +8,10 @@ $font-color-secondary: #AAA;
     background-color: $background-color-primary;
     font-family: 'Rozha One', serif;
     padding-top: 128px;
+
+    @media (max-width: 575px) {
+        padding-top: 92px;
+    }
 }
 
 .postsTitle {

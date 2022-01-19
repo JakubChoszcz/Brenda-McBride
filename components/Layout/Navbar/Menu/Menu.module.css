@@ -30,3 +30,9 @@
 .menuA:hover {
     color: #EAE6DE;
 }
+
+@media (max-width: 720px) {
+    .menuA {
+        font-size: 52px;
+    }
+}

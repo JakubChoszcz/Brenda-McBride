@@ -2,7 +2,8 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import PostItem from './PostsItem/PostItem';
 import styles from './PostsList.module.scss';
 
-const PostsList = ({ postsData, getMorePosts, hasMore }) => {
+const PostsList = ({ postsData, getMorePosts }) => {
+
     return (
         <div className={`${styles.postsContainer}`}>
             <div className={`container`}>
@@ -21,7 +22,7 @@ const PostsList = ({ postsData, getMorePosts, hasMore }) => {
                                 next={getMorePosts}
                                 hasMore={postsData.length === 12 ? false : true}
                                 loader={<h3>Loading posts...</h3>}
-                                endMessage={<h3>Theres no more posts.</h3>}
+                                endMessage={<h3>There are no more posts.</h3>}
                             >
                                 {postsData.map(post => 
                                     <PostItem

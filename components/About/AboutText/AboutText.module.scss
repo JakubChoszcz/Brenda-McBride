@@ -9,6 +9,10 @@ $font-color-secondary: #777;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: bold;
     padding: 128px 0;
+
+    @media (max-width: 767px) {
+        padding: 64px 0;
+    }
 }
 
 .textDiv {
@@ -31,6 +35,19 @@ $font-color-secondary: #777;
         font-family: 'Rozha One', serif;
         font-size: 64px;
         color: $background-color-secondary;
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        h1 {
+            font-size: 52px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        h1 {
+            font-size: 42px;
+        }
     }
 }
 
