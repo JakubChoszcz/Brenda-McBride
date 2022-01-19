@@ -5,7 +5,7 @@ import styles from './SelectedPost.module.scss';
 const SelectedPost = ({ data }) => {
     useEffect(() => {
         document.getElementsByClassName('contentDiv')[0].innerHTML = data.content;
-    }, [])
+    })
 
     return (
         <div className={`${styles.postContainer}`}>
