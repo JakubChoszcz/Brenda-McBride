@@ -20,8 +20,6 @@ export const getStaticPaths = async () => {
 
     posts.map((post) => paths.push({ params: { postId: ObjectId(post._id).toString() } }));
 
-    client.close();
-
     return {
         paths: paths,
         fallback: false
